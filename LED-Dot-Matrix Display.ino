@@ -51,92 +51,6 @@ void scroll_bangla_text(uint8_t char_arr[], int char_column, bool flag)
   delay(DELAYTIME);
 }
 
-/*
- *  0b00000010,
-    0b00010010,
-    0b00101010,
-    0b01000110,
-    0b11111110,
-    0b00000110,
-    0b00101010,
-    0b00010010
- */
-
-void myName(uint8_t char_arr[],int charWidth){
-
-   mx.wraparound(MD_MAX72XX::ON);
-
-  int width =charWidth;
-
-  for(int i=0;i<width;i++){
-    
-    mx.transform(MD_MAX72XX::TSR);
-    mx.setColumn(31,char_arr[i]);
-    delay(DELAYTIME);
-    
-  }
-
-  mx.transform(MD_MAX72XX::TSR);
-  delay(DELAYTIME);
-}
-
-
-
-void nameDesign(){
-
-
-  uint8_t s[COL_SIZE]={
-
-    0b01001111,
-    0b01001001,
-    0b01001001,
-    0b01001001,
-    0b1001001,
-    0b01001001,
-    0b01001001,
-    0b01111001
-    
-  };
-
-  uint8_t h[COL_SIZE]={
-    0b11111111,
-    0b00010000,
-    0b00010000,
-    0b00010000,
-    0b00010000,
-    0b00010000,
-    0b00010000,
-    0b11111111
-  };
-
-  uint8_t a[COL_SIZE]={
-    0b00000000,
-    0b01111111,
-    0b00001001,
-    0b00001001,
-    0b00001001,
-    0b00001001,
-    0b01111111,
-    0b00000000
-  };
-  
-   mx.clear();
-   myName(s,COL_SIZE);
-   myName(h,COL_SIZE);
-   myName(a,COL_SIZE);
-  
-}
-
- 
-  
-
-
-
-
-
-
-
-
 
 
 
@@ -661,10 +575,10 @@ void loop()
 {
 
   char a[50] = {"Welcome TO MBSTU"};
-  //scrollleft(a);
-  //  ScrollText();
-  //Bangla_text();
-  //printtext(); 
- // nameDesign();
+  scrollleft(a);
+  ScrollText();
+  Bangla_text();
+  printtext(); 
+  nameDesign();
 
 }
