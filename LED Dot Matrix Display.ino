@@ -574,10 +574,10 @@ void loop()
 {
 
   char a[50] = {"Welcome TO MBSTU"};
-  //scrollleft(a);
-  //  ScrollText();
-  //Bangla_text();
-  //printtext(); 
- // nameDesign();
+  scrollleft(a);
+  ScrollText();
+  Bangla_text();
+  printtext(); 
+  nameDesign();
 
 }
