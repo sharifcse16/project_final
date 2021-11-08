@@ -9,6 +9,7 @@
 
 MD_MAX72XX mx = MD_MAX72XX(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 #define  DELAYTIME  100
+
 void scrollleft(char p[])
 {
   int width;
